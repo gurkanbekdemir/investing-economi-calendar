@@ -31,7 +31,6 @@ table = soup.find("table", attrs={"id": "economicCalendarData"})  # we get the s
 tbody = table.find('tbody')  # we get the source code for the table
 rows = tbody.findAll('tr', {"class": "js-event-item"})  # we get the source code for the rows
 
-
 for row in rows:
     ############## event zone
     impact = row.find('td', {"class": "flagCur"}).text
