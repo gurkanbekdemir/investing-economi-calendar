@@ -6,10 +6,10 @@ import time
 
 class Forex():
     def __init__(self,begin,end):
-        source_code =self.webdriver(begin,end)
+        source_code =self.driver(begin,end)
         self.extract(source_code)
 
-    def webdriver(self,begin_date,end_date):
+    def driver(self,begin_date,end_date):
         chrome_options = Options()
         user32 = ctypes.windll.user32  # necessary for resolution
         screensize = ("window-size={}x{}").format(user32.GetSystemMetrics(0), user32.GetSystemMetrics(1))
